@@ -40,3 +40,8 @@ const randomCard = () => {
 };
 
 randomCard();
+const addRandom = () => {
+  randomCard();
+};
+
+setInterval(randomCard, 10000);
