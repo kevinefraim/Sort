@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #009900;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 550px;
+  background-color: #fff;
+  font-size: 6rem;
+  padding: 10px;
+  width: 400px;
+  border-radius: 5%;
+  color: #000;
+  box-shadow: 0 5px 15px #888;
+}
+
+.logo-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.logo-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+.card.hearts,
+.card.diamonds {
+  color: red;
+}
+.card p {
+  color: #000;
+}
