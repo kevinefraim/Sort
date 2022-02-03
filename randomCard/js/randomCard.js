@@ -1,6 +1,8 @@
 const cards = [];
+
+//funcion que crea el mazo de cartas
 const createDeck = () => {
-  const values = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const values = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
   const palos = ["Hearts", "Spades", "Diamonds", "Clubs"];
 
   for (let v = 0; v < values.length; v++) {
@@ -14,11 +16,13 @@ const createDeck = () => {
 
   return cards;
 };
-console.log(createDeck());
 
+createDeck();
+
+//funcion que elige carta del mazo aleatoriamente
 const randomCard = () => {
-  const random = Math.floor(Math.random() * 35);
-  console.log(random);
+  const random = Math.floor(Math.random() * 51);
+
   const cardValor = cards[random].valor;
   const cardPalo = cards[random].palo;
 
@@ -40,8 +44,11 @@ const randomCard = () => {
 };
 
 randomCard();
+
+//funcion para generar otra random card con boton
 const addRandom = () => {
   randomCard();
 };
 
+//ejecuta la funcion randomCard cada 10 seg
 setInterval(randomCard, 10000);
