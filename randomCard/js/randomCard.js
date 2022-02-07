@@ -17,7 +17,7 @@ const createDeck = () => {
   return cards;
 };
 
-createDeck();
+window.onload = createDeck();
 
 //funcion que elige carta del mazo aleatoriamente
 const randomCard = () => {
@@ -32,7 +32,8 @@ const randomCard = () => {
     : (entity = `&${cardPalo.toLowerCase()};`);
 
   const cardContainer = document.querySelector("#card");
-  cardContainer.classList.add("card", cardPalo.toLowerCase());
+  cardContainer.className = "card";
+  cardContainer.classList.add(cardPalo.toLowerCase());
   cardContainer.innerHTML = `
     <span>${entity} </span>
     <p class="text-center">
